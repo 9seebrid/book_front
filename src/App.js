@@ -8,7 +8,7 @@ function App() {
   // 페이지 로드 시 데이터 가져오기
   useEffect(() => {
     // API 요청
-    fetch('http://222.112.27.120:8002/books')
+    fetch('http://localhost:8002/books')
       .then((response) => {
         if (!response.ok) {
           throw new Error('데이터를 불러오는 데 실패했습니다.');
