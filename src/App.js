@@ -3,19 +3,21 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [books, setBooks] = useState([]); // 책 데이터를 저장할 상태
+  const [books, setBooks] = useState([]);
 
-  // 페이지 로드 시 데이터 가져오기
   useEffect(() => {
+    // 환경 변수에서 API URL을 가져옴
+    const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8002';
+
     // API 요청
-    fetch('http://localhost:8002/books')
+    fetch(`${apiUrl}/books`)
       .then((response) => {
         if (!response.ok) {
           throw new Error('데이터를 불러오는 데 실패했습니다.');
         }
         return response.json();
       })
-      .then((data) => setBooks(data)) // 성공 시 책 데이터 설정
+      .then((data) => setBooks(data))
       .catch((error) => console.error('API 요청 오류:', error));
   }, []);
 
