@@ -1,0 +1,38 @@
+/* App.css */
+.App {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.book-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.book-item h2 {
+  margin: 0;
+  color: #444;
+}
+
+.book-item p {
+  margin: 5px 0;
+}
+
+.book-item a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.book-item a:hover {
+  text-decoration: underline;
+}
